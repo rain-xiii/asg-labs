@@ -2,12 +2,19 @@
 
 Welcome to my repository showcasing the hands-on labs and workshops I have completed as part of my study and practice in AWS. This repository contains various exercises, projects, and scripts demonstrating my skills and knowledge gained from practical AWS training.
 
+## Disclaimer
+This repository is not intended to be a step-by-step tutorial for practical exercises. Instead, it serves as a summary and explanation of the ideas, concepts, and solutions used in building the model and addressing related issues. The content here aims to communicate the general approach rather than provide a detailed guide.
+
+
+
 ## Overview
 
 In this repository, you will find:
 
-- **Lab Exercises**: Step-by-step walkthroughs and solutions for AWS labs, such as setting up EC2 instances, creating VPCs, working with IAM, and more.
-- **Projects**: Full-stack projects utilizing multiple AWS services, demonstrating real-world use cases and deployment strategies.
+- **Lab Exercises**: This section provides a summary of the steps and solutions for various AWS labs, such as setting up EC2 instances, creating VPCs, working with IAM, and more. It focuses on the general approach and the concepts involved rather than a detailed step-by-step walkthrough.
+
+- **Projects**: In this section, you'll find full-stack projects that utilize multiple AWS services. These projects demonstrate real-world use cases and deployment strategies, highlighting the key concepts and solutions used. Detailed instructions for setup are not included.
+
 - **Scripts**: Automation scripts written using AWS CLI, Terraform, and other tools for provisioning and managing resources in AWS.
   
 The labs are part of my journey to becoming proficient in AWS, DevOps, and Cloud Engineering.
