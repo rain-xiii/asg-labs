@@ -10,7 +10,7 @@ In this directory, I document the step-by-step process of setting up a Site-to-S
 - Security considerations and troubleshooting
 
 ## 📐 Architecture Diagram
-[VPN Site to Site Architecture Diagram ](/VPN-Site-to-Site/screenshots/VPN-Architecture-Diagram.png) 
+![VPN Site to Site Architecture Diagram ](/VPN-Site-to-Site/screenshots/VPN-Architecture-Diagram.png) 
 - **Components:**
 1. VPC:
 
