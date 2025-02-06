@@ -63,4 +63,3 @@ Feel free to contribute by submitting pull requests. If you have any improvement
 - [AWS Study Group](https://www.awsstudygroup.com/) for providing valuable workshops.
 - [AWS Documentation](https://docs.aws.amazon.com/) for detailed information on services.
 
-```
