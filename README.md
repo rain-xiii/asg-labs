@@ -1,6 +1,6 @@
-# AWS Lab Workshops
+# AWS Practical Solutions & Deployments
 
-Welcome to my repository showcasing the hands-on labs and workshops I have completed as part of my study and practice in AWS. This repository contains various exercises, projects, and scripts demonstrating my skills and knowledge gained from practical AWS training.
+Welcome to my repository on AWS Practical Solutions & Deployments. This repository showcases real-world AWS implementations, covering various architectures, configurations, and automation techniques. It includes practical exercises, deployment strategies, and troubleshooting insights that demonstrate my hands-on experience and problem-solving skills in AWS environments.
 
 ## Disclaimer
 This repository is not intended to be a step-by-step tutorial for practical exercises. Instead, it serves as a summary and explanation of the ideas, concepts, and solutions used in building the model and addressing related issues. The content here aims to communicate the general approach rather than provide a detailed guide.
@@ -11,13 +11,13 @@ This repository is not intended to be a step-by-step tutorial for practical exer
 
 In this repository, you will find:
 
-- **Lab Exercises**: This section provides a summary of the steps and solutions for various AWS labs, such as setting up EC2 instances, creating VPCs, working with IAM, and more. It focuses on the general approach and the concepts involved rather than a detailed step-by-step walkthrough.
+- **AWS Implementations**: This section summarizes various AWS tasks and solutions, such as setting up EC2 instances, configuring VPCs, managing IAM, and more. It emphasizes the general approach and concepts involved, showcasing how I apply AWS tools and services to solve real-world problems.
 
 - **Projects**: In this section, you'll find full-stack projects that utilize multiple AWS services. These projects demonstrate real-world use cases and deployment strategies, highlighting the key concepts and solutions used. Detailed instructions for setup are not included.
 
 - **Scripts**: Automation scripts written using AWS CLI, Terraform, and other tools for provisioning and managing resources in AWS.
   
-The labs are part of my journey to becoming proficient in AWS, DevOps, and Cloud Engineering.
+These implementations and projects reflect my ongoing journey to mastering AWS, DevOps, and Cloud Engineering through practical application and hands-on experience.
 
 ## Structure
 
@@ -34,10 +34,12 @@ The repository is organized by topics and labs:
 Each folder contains:
 
 - A **README.md** file with detailed instructions and explanations for the lab.
+- **setup-guide.md** which provides an overview of the necessary AWS resources and configurations used in the implementation.
+- **troubleshooting.md** (optional) which outlines common issues encountered during the setup and provides solutions for resolving them.
 - **Scripts** (optional) used to automate or configure AWS resources.
-- Any **output** or **logs** from the lab sessions.
+- Any **output** or **logs** from the implementation sessions.
 
-## Labs
+## Hands-on Sessions
 
 1. [**VPN Site-to-Site**](VPN-Site-to-Site/README.md)
 
