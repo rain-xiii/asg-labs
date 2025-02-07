@@ -3,7 +3,7 @@
 This section showcases my ability to configure and troubleshoot AWS Site-to-Site VPN, a secure and scalable solution for connecting on-premises networks to AWS or interconnecting multiple VPCs.  
 
 ## 🌍 Overview  
-In this directory, I document the step-by-step process of setting up a Site-to-Site VPN, including:  
+This document provides an overview of the Site-to-Site VPN setup, explaining its architecture, key configurations, and solutions, including  
 - Configuring **Customer Gateway** and **Virtual Private Gateway**  
 - Setting up VPN Connections and Tunnels  
 - Implementing **Route Propagation** in Route Tables  
@@ -34,9 +34,9 @@ In this directory, I document the step-by-step process of setting up a Site-to-S
       - A connection point on the customer’s side (on-premise) that enables the customer’s network to connect to the AWS VPC via the VPN connection. This is the starting point of the secure link between the customer and AWS.
 
 ## 🛠 Setup-guide
-- Step-by-step configuration guide [here](/VPN-Site-to-Site/Setup-guide.md)
+- Summary of the steps and explanation of the ideas [here](/VPN-Site-to-Site/Setup-guide.md).
 ## ⚠️ Troubleshooting
-- 
+- Common VPN connection errors and their troubleshooting steps [here](/VPN-Site-to-Site/Troubleshooting.md).
 
 ## 🎯 Goals  
 By working on this, I aim to:  
