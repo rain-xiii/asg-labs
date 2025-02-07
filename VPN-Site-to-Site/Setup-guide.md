@@ -7,14 +7,16 @@ This guide details the setup of a **Site-to-Site VPN** between an **AWS environm
 ## **2. AWS Network Setup**  
 
 ### **Step 1: Create a VPC**  
-- Create a **VPC** with CIDR block `10.10.0.0/16` (as per the architecture diagram).  
+- Create a **VPC** with CIDR block `10.10.0.0/16` (as per the architecture diagram).
 
+![ASG VPC](/VPN-Site-to-Site/screenshots/ASG-VPC-Created.PNG)
 ### **Step 2: Create Public and Private Subnets**  
 - Create **four subnets**:  
   - **2 public subnets**  
   - **2 private subnets**  
-  - Each in a different Availability Zone (AZ).  
+  - Each in a different Availability Zone (AZ).
 
+![ASG Subnet - 2 public, 2 private](/VPN-Site-to-Site/screenshots/ASG-Subnet-Created.PNG)
 ### **Step 3: Configure Public Subnets**  
 - **Internet Connectivity:**  
   - Create an **Internet Gateway** and attach it to the VPC.  
@@ -23,15 +25,18 @@ This guide details the setup of a **Site-to-Site VPN** between an **AWS environm
 - **Security Group for Public Subnets:**  
   - Allow **SSH (port 22)** and **ICMP (ping)**.  
 - **Deploy a Public EC2 Instance:**  
-  - SSH into the instance and test internet connectivity by pinging an external website.  
+  - SSH into the instance and test internet connectivity by pinging an external website.
 
+![ASG EC2 Public](/VPN-Site-to-Site/screenshots/ASG-EC2-public-created.PNG)
 ### **Step 4: Configure Private Subnets**  
 - **Elastic IP Allocation:**  
   - Allocate an **Elastic IP** manually to maintain better control over IP assignments.  
 - **NAT Gateway Configuration:**  
   - Deploy a **NAT Gateway** in **Public Subnet 2** and associate the Elastic IP.  
   - Create a **Route Table** for private subnets, routing outbound traffic to the NAT Gateway.  
-  - Associate the Route Table with private subnets.  
+  - Associate the Route Table with private subnets.
+
+![ASG NAT Gateway](/VPN-Site-to-Site/screenshots/ASG-NAT-Created.PNG)
 - **Security Group for Private Subnets:**  
   - Allow **SSH access only from the Public Subnet’s Security Group**.  
   - Allow **ICMP from anywhere** (for network testing).  
@@ -39,7 +44,8 @@ This guide details the setup of a **Site-to-Site VPN** between an **AWS environm
   - SSH into the Public EC2 instance.  
   - Copy the **key-pair** to the Public EC2 instance.  
   - From the Public EC2 instance, SSH into the Private EC2 instance.  
-  - Test internet connectivity by pinging an external website.  
+  - Test internet connectivity by pinging an external website.
+![ASG EC2 Private](/VPN-Site-to-Site/screenshots/ASG-EC2-private-created.PNG)
 
 ---
 
@@ -53,8 +59,11 @@ To represent the **on-premises network**, set up another VPC in a similar way.
 - **Create a Route Table** for the public subnet and route traffic to the Internet Gateway.  
 - **Configure Security Group:**  
   - Open **UDP port 500** for VPN connectivity.  
-  - If the VPN is behind NAT, open **UDP port 4500** instead.  
+  - If the VPN is behind NAT, open **UDP port 4500** instead.
+- **Deploy a Customer EC2 Instance:**  
+  - SSH into the instance and test internet connectivity by pinging an external website.
 
+![Customer Instance](/VPN-Site-to-Site/screenshots/Customer-EC2-Public-Created.PNG)
 ---
 
 ## **4. Configuring the Site-to-Site VPN Connection**  
@@ -83,10 +92,14 @@ To represent the **on-premises network**, set up another VPC in a similar way.
 
 ### **Step 11: Verify Connectivity**  
 - In AWS, go to **VPN Connections** and check the **Tunnel Status**:  
-  - At least **one tunnel should be “Up”**.  
+  - At least **one tunnel should be “Up”**.
+
+![VPN Connection Tunnel](/VPN-Site-to-Site/screenshots/VPN-connection-tunnel.PNG)  
 - **Test connectivity:**  
-  - From the **customer’s on-premises network**, ping the **private IP of the AWS Private EC2 instance**.  
-  - From the **AWS Private EC2 instance**, ping the **customer’s on-premises network**.  
+  - From the **customer’s on-premises network**, ping the **private IP of the AWS Private EC2 instance**.
+  ![Customer Instance ping to EC2 Private](/VPN-Site-to-Site/screenshots/Customer-instance-ping-to-EC2-private.PNG)  
+  - From the **AWS Private EC2 instance**, ping the **customer’s on-premises network**.
+  ![EC2 private ping to Customer Instance](/VPN-Site-to-Site/screenshots/EC2-private-ping-to-Customer-Instance.PNG)  
 
 ---
 
