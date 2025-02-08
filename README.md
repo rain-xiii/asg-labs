@@ -21,19 +21,19 @@ These implementations and projects reflect my ongoing journey to mastering AWS, 
 
 ## Structure
 
-The repository is organized by topics and labs:
+The repository is organized by topics and hands-on sessions:
 
 
 ```bash
 .
 │── README.md 
 │── VPN-Site-to-Site/
-│── Route-53/ 
+│── Set-up-Hybrid-DNS/ 
 ```
 
 Each folder contains:
 
-- A **README.md** file with detailed instructions and explanations for the lab.
+- A **README.md** file with detailed instructions and explanations for the hands-on sessions.
 - **setup-guide.md** which provides an overview of the necessary AWS resources and configurations used in the implementation.
 - **troubleshooting.md** (optional) which outlines common issues encountered during the setup and provides solutions for resolving them.
 - **Scripts** (optional) used to automate or configure AWS resources.
@@ -46,14 +46,14 @@ Each folder contains:
 
 ## Getting Started
 
-To get started with these labs, clone the repository and follow the individual instructions within each lab folder:
+To get started with these hands-on sessions, clone the repository and follow the individual instructions within each lab folder:
 
 ```bash
 git clone https://github.com/rain-xiii/asg-labs.git
 cd aws-lab-workshops
 ```
 
-Each lab has its own set of instructions for setup and execution.
+Each hands-on session has its own set of instructions for setup and execution.
 
 ## Prerequisites
 
