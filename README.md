@@ -42,7 +42,7 @@ Each folder contains:
 ## Hands-on Sessions
 
 1. [**VPN Site-to-Site**](VPN-Site-to-Site/README.md)
-
+2. [**Set up Hybrid DNS**](/Set-up-Hybrid-DNS/README.md)
 
 ## Getting Started
 
