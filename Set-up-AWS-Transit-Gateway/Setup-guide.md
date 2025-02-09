@@ -74,12 +74,10 @@ This guide provides an overview of setting up a **centralized network architectu
 9. **Create and Configure Transit Gateway Route Tables**
     
     - Create a **Transit Gateway Route Table**.
-    - **Associate** all four VPC attachments with the route table.
-
+    - **Associate** all four VPC attachments with the route table.   
 ![All four VPC attachments associated](/Set-up-AWS-Transit-Gateway/screenshots/TGW-associations-created.PNG)
 
-- **Propagate** routes for each attachment.
-
+    - **Propagate** routes for each attachment.
 ![All four attachments propagated](/Set-up-AWS-Transit-Gateway/screenshots/TGW-propagations-created.PNG)
 
 10. **Update VPC Route Tables**
