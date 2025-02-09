@@ -59,11 +59,12 @@ This guide provides an overview of setting up a **centralized network architectu
     🔹 **Note:** Each VPC in this setup has **only one subnet attached**, but in a production environment, multiple subnets should be attached for redundancy.
 
 ![Transit gateway Attachment](/Set-up-AWS-Transit-Gateway/screenshots/Transit-gateway-attachment-created.PNG)
+
 8. **Verify Connectivity** (Before Routing)
     
-- SSH into a **Public EC2 instance**.
-- Attempt to **ping** a private EC2 instance.
-- The ping will **fail** because routing is not yet configured.
+    - SSH into a **Public EC2 instance**.
+    - Attempt to **ping** a private EC2 instance.
+    - The ping will **fail** because routing is not yet configured.
 
 ![Fail from ping to EC2 private](/Set-up-AWS-Transit-Gateway/screenshots/EC2-1-ping-to-EC2-2.PNG)
 ---
@@ -72,8 +73,8 @@ This guide provides an overview of setting up a **centralized network architectu
 
 9. **Create and Configure Transit Gateway Route Tables**
     
-- Create a **Transit Gateway Route Table**.
-- **Associate** all four VPC attachments with the route table.
+    - Create a **Transit Gateway Route Table**.
+    - **Associate** all four VPC attachments with the route table.
 
 ![All four VPC attachments associated](/Set-up-AWS-Transit-Gateway/screenshots/TGW-associations-created.PNG)
 
