@@ -24,10 +24,10 @@ This guide provides an overview of setting up a **centralized network architectu
     - Review and launch the stack.
 
 ![Cloudformation stack](/Set-up-AWS-Transit-Gateway/screenshots/Cloudformation-stack-created.PNG)
-4. **Verify the Infrastructure**
-    
-- Once the stack is created, navigate to the **Outputs** tab in CloudFormation.
-- Check the assigned **IP addresses** for the EC2 instances.
+
+4. **Verify the Infrastructure**    
+    - Once the stack is created, navigate to the **Outputs** tab in CloudFormation.
+    - Check the assigned **IP addresses** for the EC2 instances.
 
 ![Cloudformation stack Outputs](/Set-up-AWS-Transit-Gateway/screenshots/Cloudformation-stack-Outputs.PNG)
 
