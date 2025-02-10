@@ -1,39 +1,91 @@
-# VPC Peering
+# **Setup Guide: VPC Peering in AWS**
 
-This section covers the implementation of VPC Peering to establish private connectivity between Virtual Private Clouds (VPCs) within AWS. Instead of a step-by-step guide, the focus is on key concepts, configuration strategies, and important considerations when enabling network communication across VPCs.
+This guide provides a step-by-step approach to setting up **VPC Peering** between two VPCs using **AWS CloudFormation** and configuring networking components to enable secure communication.
 
-## 🌍 Overview  
+---
 
-- Key Topics Covered:
-    - Understanding VPC Peering and its role in AWS networking
-    - Setting up peering connections between VPCs in the same AWS accounts/regions
-    - Configuring route tables and security groups to allow traffic between peered VPCs
-    - Limitations and best practices for managing scalability, security, and performance
-- By leveraging VPC Peering, resources in separate VPCs can securely communicate over AWS’s internal network, without requiring a VPN or Transit Gateway. This approach is cost-effective and offers low-latency connectivity while ensuring controlled and secure access between environments.
+## **1. Deploy VPCs and Networking Components**
 
-## 📐 Architecture Diagram
+### **Create VPCs**
 
-![VPC peering](/VPC-Peering/screenshots/VPC-Peering-Architect.png)
+- Deploy **My VPC** and **HG VPC** based on the defined CIDR blocks in the architecture diagram.
 
-## 🛠 Setup-guide
+### **Configure Security Groups**
 
-- Summary of the steps and explanation of the ideas [here](/VPC-Peering/Setup-guide.md)
-  
+- Create a **Security Group** for **My VPC** and **HG VPC** that allows **SSH (port 22)** and **ICMP (ping)** for instances in the **Public Subnets**.
 
-## 🎯 Goals 
- 
-- The goal of this setup is to establish secure and private communication between VPCs using VPC Peering. This enables instances in different VPCs to communicate without traversing the public internet, reducing latency, cost, and security risks.
+### **Update Network ACLs**
 
-- By the end of this setup, you will:
-    - Create a VPC Peering Connection between two or more VPCs
-    - Configure Route Tables to enable traffic flow between peered VPCs
-    - Update Security Groups to allow cross-VPC communication
-    - Verify connectivity between instances across VPCs
+- Modify **Network ACLs** to restrict traffic, ensuring that only **My VPC's IP range** can access **HG VPC**.
 
-- This setup is ideal for workloads requiring inter-VPC communication, such as multi-tier applications, shared services architectures, or connecting VPCs across AWS accounts and regions.
-  
-## 🔗 External Resources
+---
 
-For more detailed instructions and reference material, you can refer to the original AWS Study Group Guide:
+## **2. Validate Initial Connectivity**
 
-- [Set up VPC Peering](https://000019.awsstudygroup.com/)
+### **SSH and Ping Test**
+
+1. **SSH into My VPC's EC2 Instance**
+2. **Attempt to ping** an EC2 instance in HG VPC
+    - This should **fail** because:
+        - The instances previously communicated via **public IPs** through the **Internet Gateway**.
+        - There is **no direct private route** between My VPC and HG VPC.
+
+![Fail to ping to HG VPC](/VPC-Peering/screenshots/Fail-to-ping-HG-VPC.PNG)
+
+---
+
+## **3. Establish VPC Peering**
+
+### **Create a VPC Peering Connection**
+
+1. Initiate a **VPC Peering Request** from My VPC to HG VPC.
+2. Accept the **Peering Request** in the AWS Console.
+
+### **Test Connectivity Again**
+
+- Try **pinging** the HG VPC instance from My VPC.
+- This should still **fail** because the **Route Tables have not been updated**.
+
+---
+
+## **4. Configure Route Tables for Peering**
+
+### **Update Route Tables in Both VPCs**
+
+1. Add a **route in My VPC** to send traffic to **HG VPC’s CIDR** via the **VPC Peering Connection**.
+2. Add a **route in HG VPC** to send traffic to **My VPC’s CIDR** via the **VPC Peering Connection**.
+
+### **Test Connectivity Again**
+
+- Ping the **HG VPC instance from My VPC**.
+- The connection should now succeed.
+
+---
+
+## **5. Enable Cross-VPC DNS Resolution**
+
+### **Modify Peering Connection Settings**
+
+1. **Enable DNS Hostnames & DNS Resolution** for both VPCs.
+2. **Modify the Peering Connection settings** to enable **DNS resolution across VPCs**.
+
+![Enable Cross-Peering DNS](/VPC-Peering/screenshots/Enable-Cross-Peering-DNS.PNG)
+
+### **Test DNS Resolution**
+
+- SSH into My VPC’s EC2 instance and resolve the **Public DNS of HG VPC’s EC2 instance**.
+- If **DNS Peering is not enabled**, the query will return the **Public IP**, forcing traffic through the **Internet Gateway**.
+- If **DNS Peering is enabled**, it should return the **Private IP**, allowing private connectivity.
+
+![Succeed ping to HG VPC](/VPC-Peering/screenshots/Succeed-to-ping-HG-VPC.PNG)
+
+---
+
+## **Final Verification**
+
+- VPCs are securely peered.
+- Route Tables are updated for **private communication**.
+- Cross-VPC **DNS resolution is enabled**.
+- EC2 instances in both VPCs can communicate **without using public IPs**.
+
+This setup ensures **efficient, secure, and cost-effective** VPC communication, ideal for **multi-tier applications, microservices, or hybrid architectures**.

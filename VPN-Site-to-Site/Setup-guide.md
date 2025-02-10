@@ -1,10 +1,10 @@
-## **1. Overview**  
+## ** Overview**  
 This guide details the setup of a **Site-to-Site VPN** between an **AWS environment** and a **customer’s on-premises network**. The process involves:  
 1. Setting up the AWS network.  
 2. Setting up the customer’s on-premises network.  
 3. Configuring the **Site-to-Site VPN connection** between both environments.  
 
-## **2. AWS Network Setup**  
+## **1. AWS Network Setup**  
 
 ### **Step 1: Create a VPC**  
 - Create a **VPC** with CIDR block `10.10.0.0/16` (as per the architecture diagram).
@@ -49,7 +49,7 @@ This guide details the setup of a **Site-to-Site VPN** between an **AWS environm
 
 ---
 
-## **3. Customer Network Setup (Simulated VPN Environment)**  
+## **2. Customer Network Setup (Simulated VPN Environment)**  
 To represent the **on-premises network**, set up another VPC in a similar way.  
 
 ### **Step 5: Create a Simulated Customer Network**  
@@ -66,7 +66,7 @@ To represent the **on-premises network**, set up another VPC in a similar way.
 ![Customer Instance](/VPN-Site-to-Site/screenshots/Customer-EC2-Public-Created.PNG)
 ---
 
-## **4. Configuring the Site-to-Site VPN Connection**  
+## **3. Configuring the Site-to-Site VPN Connection**  
 
 ### **Step 6: Create a Virtual Private Gateway (VPG) in AWS**  
 - Attach the VPG to the **AWS VPC**.  
@@ -84,7 +84,7 @@ To represent the **on-premises network**, set up another VPC in a similar way.
 
 ---
 
-## **5. Configuring the Customer Gateway**  
+## **4. Configuring the Customer Gateway**  
 
 ### **Step 10: Download and Apply VPN Configuration**  
 - Go to **VPN Connections** → Select your VPN → Click **Download Configuration** (choose OpenSwan vendor).  
@@ -103,7 +103,7 @@ To represent the **on-premises network**, set up another VPC in a similar way.
 
 ---
 
-## **6. Summary **  
+## **Summary **  
 - We have successfully established a **Site-to-Site VPN** between AWS and a simulated customer network.  
 - This setup enables **secure communication** between both environments.  
  

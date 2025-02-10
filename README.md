@@ -44,6 +44,7 @@ Each folder contains:
 1. [**VPN Site-to-Site**](VPN-Site-to-Site/README.md)
 2. [**Set up Hybrid DNS**](/Set-up-Hybrid-DNS/README.md)
 3. [**Set up Transit Gateway**](/Set-up-AWS-Transit-Gateway/README.md)
+4. [**VPC Peering**](/VPC-Peering/README.md)
 
 ## Getting Started
 
