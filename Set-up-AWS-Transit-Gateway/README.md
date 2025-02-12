@@ -13,9 +13,9 @@ In this setup, we will:
 
 ![Transit-Gateway-Architect](/Set-up-AWS-Transit-Gateway/screenshots/Transit-gateway-architect.png)
 
-## 🛠 Setup-guide
+## 🛠 Implementation-details
 
-  - Summary of the steps and explanation of the ideas [here](/Set-up-AWS-Transit-Gateway/Setup-guide.md)
+  - Summary of the steps and explanation of the ideas [here](/Set-up-AWS-Transit-Gateway/Implementation-details.md)
 
 ## 🎯 Goals  
 
@@ -28,7 +28,7 @@ The goal of this setup is to establish a centralized and scalable network archit
   
 ## 🔗 External Resources
 
-For more detailed instructions and reference material, you can refer to the original AWS Study Group Guide:
+For more detailed instructions and reference material, you can refer to the original **AWS Study Group** Guide:
 
 
 - [Set up AWS Transit Gateway](https://000020.awsstudygroup.com/)

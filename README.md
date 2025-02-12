@@ -34,8 +34,8 @@ The repository is organized by topics and hands-on sessions:
 Each folder contains:
 
 - A **README.md** file with detailed instructions and explanations for the hands-on sessions.
-- **setup-guide.md** which provides an overview of the necessary AWS resources and configurations used in the implementation.
-- **troubleshooting.md** (optional) which outlines common issues encountered during the setup and provides solutions for resolving them.
+- **Implementation-details.md** which provides an overview of the necessary AWS resources and configurations used in the implementation.
+- **Troubleshooting.md** (optional) which outlines common issues encountered during the setup and provides solutions for resolving them.
 - **Scripts** (optional) used to automate or configure AWS resources.
 - Any **output** or **logs** from the implementation sessions.
 
@@ -45,7 +45,8 @@ Each folder contains:
 2. [**Set up Hybrid DNS**](/Set-up-Hybrid-DNS/README.md)
 3. [**Set up Transit Gateway**](/Set-up-AWS-Transit-Gateway/README.md)
 4. [**VPC Peering**](/VPC-Peering/README.md)
-5. [**Deploy User Management Application on EC2 Linux and Windows**](/Deploy-Application-on-EC2/README.md)
+5. [**Demo EC2 basic**](/EC2-basic-Demo/README.md)
+6. [**Deploy User Management Application on EC2 Linux and Windows**](/Deploy-Application-on-EC2/README.md)
 
 ## Getting Started
 
@@ -72,6 +73,6 @@ Feel free to contribute by submitting pull requests. If you have any improvement
 
 ## Acknowledgments
 
-- [AWS Study Group](https://www.awsstudygroup.com/) for providing valuable workshops.
-- [AWS Documentation](https://docs.aws.amazon.com/) for detailed information on services.
+- [**AWS Study Group**](https://www.awsstudygroup.com/) for providing valuable workshops.
+- [**AWS Documentation**](https://docs.aws.amazon.com/) for detailed information on services.
 

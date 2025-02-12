@@ -15,9 +15,9 @@ This section covers the implementation of VPC Peering to establish private conne
 
 ![VPC peering](/VPC-Peering/screenshots/VPC-Peering-Architect.png)
 
-## 🛠 Setup-guide
+## 🛠 Implementation-details
 
-- Summary of the steps and explanation of the ideas [here](/VPC-Peering/Setup-guide.md)
+- Summary of the steps and explanation of the ideas [here](/VPC-Peering/Implementation-details.md)
   
 
 ## 🎯 Goals 
@@ -34,6 +34,6 @@ This section covers the implementation of VPC Peering to establish private conne
   
 ## 🔗 External Resources
 
-For more detailed instructions and reference material, you can refer to the original AWS Study Group Guide:
+For more detailed instructions and reference material, you can refer to the original **AWS Study Group** Guide:
 
 - [Set up VPC Peering](https://000019.awsstudygroup.com/)
