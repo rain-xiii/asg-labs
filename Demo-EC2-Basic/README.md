@@ -18,7 +18,7 @@ This repository demonstrates core AWS EC2 functionalities, showcasing my profici
 
 ## 🛠 Implementation Details
 
-- Summary of the steps and explanation of the ideas [here](/EC2-basic-Demo/Implementation-details.md)
+- Summary of the steps and explanation of the ideas [here](/Demo-EC2-Basic/Implementation-details.md)
 
 ## 🔗 External Resources
 
