@@ -53,8 +53,8 @@ Each folder contains:
 To get started with these hands-on sessions, clone the repository and follow the individual instructions within each lab folder:
 
 ```bash
-git clone https://github.com/rain-xiii/asg-labs.git
-cd aws-lab-workshops
+git clone https://github.com/rain-xiii/aws-devops-playbook.git
+cd aws-devops-playbook
 ```
 
 Each hands-on session has its own set of instructions for setup and execution.
