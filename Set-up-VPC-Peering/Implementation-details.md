@@ -30,7 +30,7 @@ This guide provides a step-by-step approach to setting up **VPC Peering** betwee
         - The instances previously communicated via **public IPs** through the **Internet Gateway**.
         - There is **no direct private route** between My VPC and HG VPC.
 
-![Fail to ping to HG VPC](/VPC-Peering/screenshots/Fail-to-ping-HG-VPC.PNG)
+![Fail to ping to HG VPC](/Set-up-VPC-Peering/screenshots/Fail-to-ping-HG-VPC.PNG)
 
 ---
 
@@ -69,7 +69,7 @@ This guide provides a step-by-step approach to setting up **VPC Peering** betwee
 1. **Enable DNS Hostnames & DNS Resolution** for both VPCs.
 2. **Modify the Peering Connection settings** to enable **DNS resolution across VPCs**.
 
-![Enable Cross-Peering DNS](/VPC-Peering/screenshots/Enable-Cross-Peering-DNS.PNG)
+![Enable Cross-Peering DNS](/Set-up-VPC-Peering/screenshots/Enable-Cross-Peering-DNS.PNG)
 
 ### **Test DNS Resolution**
 
@@ -77,7 +77,7 @@ This guide provides a step-by-step approach to setting up **VPC Peering** betwee
 - If **DNS Peering is not enabled**, the query will return the **Public IP**, forcing traffic through the **Internet Gateway**.
 - If **DNS Peering is enabled**, it should return the **Private IP**, allowing private connectivity.
 
-![Succeed ping to HG VPC](/VPC-Peering/screenshots/Succeed-to-ping-HG-VPC.PNG)
+![Succeed ping to HG VPC](/Set-up-VPC-Peering/screenshots/Succeed-to-ping-HG-VPC.PNG)
 
 ---
 
