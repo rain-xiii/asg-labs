@@ -44,7 +44,7 @@ Each folder contains:
 1. [**VPN Site-to-Site**](VPN-Site-to-Site/README.md)
 2. [**Set up Hybrid DNS**](/Set-up-Hybrid-DNS/README.md)
 3. [**Set up Transit Gateway**](/Set-up-AWS-Transit-Gateway/README.md)
-4. [**VPC Peering**](/VPC-Peering/README.md)
+4. [**VPC Peering**](/Set-up-VPC-Peering/README.md)
 5. [**Demo EC2 basic**](/Demo-EC2-Basic/README.md)
 6. [**Deploy User Management Application on EC2 Linux and Windows**](/Deploy-Application-on-EC2/README.md)
 
