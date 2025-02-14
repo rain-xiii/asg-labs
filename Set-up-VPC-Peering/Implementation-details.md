@@ -1,4 +1,4 @@
-# **Setup Guide: VPC Peering in AWS**
+## Overview  
 
 This guide provides a step-by-step approach to setting up **VPC Peering** between two VPCs using **AWS CloudFormation** and configuring networking components to enable secure communication.
 

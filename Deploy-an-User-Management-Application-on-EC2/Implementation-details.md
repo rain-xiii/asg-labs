@@ -1,4 +1,4 @@
-## ** Overview**  
+## Overview  
 
 This document outlines the key implementation details for deploying a full-stack CRUD application on Amazon Linux 2 using a hybrid LAMP and Node.js environment. It covers the essential steps involved, including:
 

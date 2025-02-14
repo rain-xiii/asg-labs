@@ -13,11 +13,11 @@ This section covers the implementation of VPC Peering to establish private conne
 
 ## 📐 Architecture Diagram
 
-![VPC peering](/Set-up-VPC-Peering/screenshots/VPC-Peering-Architect.png)
+![VPC peering](Set-up-VPC-Peering/screenshots/VPC-Peering-Architect.png)
 
 ## 🛠 Implementation-details
 
-- Summary of the steps and explanation of the ideas [here](/Set-up-VPC-Peering/Implementation-details.md)
+- Summary of the steps and explanation of the ideas [here](Set-up-VPC-Peering/Implementation-details.md)
   
 
 ## 🎯 Goals 
